@@ -10,14 +10,18 @@ function MyComponentUseSatta() {
     const handleImg=()=>{
         
 
-        setImg1(img1 === atanagildo ? ervigio : atanagildo)
-        const CurrentColor = Math.floor(Math.random()*colors.length);
+        setImg1(img1 === atanagildo ? ervigio : atanagildo);
 
-        const IndexColor = colorIndex[CurrentColor];
-    }
+        const CurrentColor = Math.floor(Math.random()*colors.length);
+        setColorIndex(CurrentColor);
+
+      }
+      
+      const IndexColor = colors[colorIndex];
 
   return (
-    <div className='flex ' style={{}}>
+    
+    <div className='flex ' style={{backgroundColor:IndexColor}}>
       
       <button className='border-[2px] rounded p-3' onClick={handleImg} > Cambiar imagen</button>
 
